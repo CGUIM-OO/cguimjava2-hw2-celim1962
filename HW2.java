@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 /**
  * @author TODO: please add student ID and name here
+ b0444126 ªL¥°«³
  * Try to write some comments for your codes (methods, 15 points)
+ that's so funny!
  */
 public class HW2 {
 
@@ -16,7 +18,7 @@ public class HW2 {
 		int nDeck=Integer.parseInt(testn);
 		Deck deck=new Deck(nDeck);
 		//TODO: please check your output, make sure that you print all cards on your screen (10 points)
-		deck.printDeck();
+		deck.printDeck(nDeck);
 		
 		if(isAllCardsCorrect(deck.getAllCards(),nDeck)){
 			System.out.println("Well done!");
@@ -26,8 +28,8 @@ public class HW2 {
 	}
 	/**
 	 * This method is used for checking your result, not a part of your HW2
-	 * @param allCards æ‰€æœ‰çš„ç‰Œ
-	 * @param nDeck ç¸½å…±æœ‰å¹¾å‰¯ç‰Œ
+	 * @param allCards ©Ò¦³ªºµP
+	 * @param nDeck Á`¦@¦³´X°ÆµP
 	 * @return
 	 */
 	private static boolean isAllCardsCorrect(ArrayList<Card> allCards,int nDeck){
@@ -65,6 +67,7 @@ public class HW2 {
 }
 /**
  * Description: TODO: please add description here
+ I have no idea about these codes.
  */
 class Deck{
 	private ArrayList<Card> cards;
@@ -77,13 +80,21 @@ class Deck{
 		//Card card=new Card(1,1); ->means new card as clubs ace
 		//cards.add(card);
 		//Sample code end
+		for (int c = 0; c < nDeck; c++) {
+			for (int a = 1; a < 5; a++) {
+				for (int b = 1; b < 14; b++) {
+					Card card = new Card(a, b);
+					cards.add(card);
+				}
+			}
+		}
 
 	}	
 	//TODO: Please implement the method to print all cards on screen (10 points)
-	public void printDeck(){
+	public void printDeck(int nDeck){
 		//Hint: print all items in ArrayList<Card> cards, 
 		//TODO: please implement and reuse printCard method in Card class (5 points)
-
+Card.printCard(nDeck);
 	}
 	public ArrayList<Card> getAllCards(){
 		return cards;
@@ -104,9 +115,17 @@ class Card{
 		rank=r;
 	}	
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
-	public void printCard(){
+	public static void printCard(int nDeck){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
+for(int k=0;k<nDeck;k++) {
+		for (int i = 1; i < 5; i++) {
+			for (int j = 1; j < 14; j++) {
+				System.out.println(i + "," + j);
 
+		
+			}
+		}
+		}
 	}
 	public int getSuit(){
 		return suit;
